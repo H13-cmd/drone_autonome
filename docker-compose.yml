@@ -1,0 +1,10 @@
+services:
+  drone:
+    build: .
+    image: drone-ros2:humble
+    container_name: drone_dev
+    network_mode: host
+    tty: true
+    stdin_open: true
+    volumes:
+      - ./src:/ros2_ws/src
